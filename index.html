@@ -222,29 +222,32 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script>
-          function setLang(lang) {
-            document.querySelectorAll('.i18n').forEach(el => {
-              const text = el.dataset[lang];
-              if (text) {
-                el.textContent = text;
-              }
-            });
-
-            // Guardar idioma en localStorage (opcional)
-            localStorage.setItem('lang', lang);
-          }
-
-          // Detectar idioma del navegador al cargar la página
-          document.addEventListener("DOMContentLoaded", function () {
-            const savedLang = localStorage.getItem('lang');
-            if (savedLang) {
-              setLang(savedLang);
-            } else {
-              const userLang = navigator.language || navigator.userLanguage;
-              const langCode = userLang.startsWith('es') ? 'es' : 'en';
-              setLang(langCode);
-            }
+        function setLang(lang) {
+          document.querySelectorAll('.i18n').forEach(el => {
+            const text = el.dataset[lang];
+            if (text) el.textContent = text;
           });
+
+          document.querySelectorAll('.i18n-html').forEach(el => {
+            const html = el.dataset[lang + 'Html'];
+            if (html) el.innerHTML = html;
+          });
+
+          localStorage.setItem('lang', lang);
+        }
+
+        // Detectar idioma del navegador al cargar la página
+        document.addEventListener("DOMContentLoaded", function () {
+          const savedLang = localStorage.getItem('lang');
+          if (savedLang) {
+            setLang(savedLang);
+          } else {
+            const userLang = navigator.language || navigator.userLanguage;
+            const langCode = userLang.startsWith('es') ? 'es' : 'en';
+            setLang(langCode);
+          }
+        });
+</script>
       </script>
     </body>
 </html>
