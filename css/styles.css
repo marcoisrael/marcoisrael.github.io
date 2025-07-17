@@ -10977,4 +10977,25 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+}#language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
 }
+
+#language-switcher button {
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  margin: 2px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#language-switcher button:hover {
+  background-color: #e2e6ea;
+}
+

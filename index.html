@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-<!DOCTYPE html>
-<html lang="es">
-    <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Resume - Start Bootstrap Theme</title>
+        <title>Resume - Marco Israel Rodríguez Cornejo</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -20,7 +17,12 @@
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
     </head>
-    <body id="page-top">
+        <body id="page-top">
+          <div id="language-switcher">
+      <button onclick="setLang('es')">ES</button>
+      <button onclick="setLang('en')">EN</button>
+    </div>
+
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -30,35 +32,51 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sobre mí</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experiencia</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Educación</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Intereses</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Extra</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger i18n" href="#about" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger i18n" href="#experience" data-es="Experiencia" data-en="Experience">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger i18n" href="#education" data-es="Educación" data-en="Education">Educación</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger i18n" href="#skills" data-es="Aptitudes" data-en="Skills">Aptitudes</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger i18n" href="#interests" data-es="Interesés" data-en="Interests">Intereses</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger i18n" href="#awards">Extra</a></li>
                 </ul>
             </div>
         </nav>
         <!-- Page Content-->
         <div class="container-fluid p-0">
-            <!-- About-->
+                        <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
                     <h1 class="mb-0">
                         Marco Israel Rodríguez Cornejo
                     </h1>
-                    <div class="subheading mb-5">
+                    <div class="subheading mb-5 i18n" data-es="Científico de Datos" data-en="Data scientist">
                         Científico de Datos
                     </div>
-                    <p class="lead mb-5">Soy un físico enfocado en la ciencia de datos, simulaciones numéricas y aprendizaje automático. Durante mi formación realicé  simulaciones  de fenómenos físicos complejos empleando diversos lenguajes de programación y herramientas como Python y Fortran  en el centro de datos de alto rendimiento del Instituto de Ciencias Nucleares. Considero que una de mis fortalezas en la perseverancia para intentar hasta lograr mis objetivos y una gran curiosidad por conocer cómo funciona todo.</p>
+                    <p class="lead mb-5 i18n" 
+                      data-es="Soy un físico enfocado en la ciencia de datos, simulaciones numéricas y aprendizaje automático. Durante mi formación realicé  simulaciones  de fenómenos físicos complejos empleando diversos lenguajes de programación y herramientas como Python y Fortran  en el centro de datos de alto rendimiento del Instituto de Ciencias Nucleares. Considero que una de mis fortalezas en la perseverancia para intentar hasta lograr mis objetivos y una gran curiosidad por conocer cómo funciona todo."
+                      data-en="I am a physicist focused on data science, numerical simulations, and machine learning. During my training, I conducted simulations of complex physical phenomena using various programming languages and tools such as Python and Fortran at the Institute of Nuclear Sciences' high-performance data center. I consider one of my strengths to be my perseverance in pursuing my goals and a deep curiosity about how everything works.">
+                    Soy un físico enfocado en la ciencia de datos, simulaciones numéricas y aprendizaje automático. Durante mi formación realicé  simulaciones  de fenómenos físicos complejos empleando diversos lenguajes de programación y herramientas como Python y Fortran  en el centro de datos de alto rendimiento del Instituto de Ciencias Nucleares. Considero que una de mis fortalezas en la perseverancia para intentar hasta lograr mis objetivos y una gran curiosidad por conocer cómo funciona todo.</p>
                     <div class="lead mb-5">
-                    <p>Dirección: San Buenventura, Estado de México.</p>
-                    <p>Teleéfono: (52) 55 81 50 14 58</p>
-                    <p>Email: <a href="mailto:marco_israel@ciencias.unam.mx">marco_israel@ciencias.unam.mx</a></p>
+                      <p class="i18n" 
+                         data-es="Dirección: San Buenaventura, Ixtapaluca, Estado de México." 
+                         data-en="Address: San Buenaventura, Ixtapaluca, State of Mexico.">
+                        Dirección: San Buenaventura, Ixtapaluca, Estado de México.
+                      </p>
 
-                </div>
+                      <p class="i18n" 
+                         data-es="Teléfono: (52) 55 81 50 14 58" 
+                         data-en="Phone: (52) 55 81 50 14 58">
+                        Teléfono: (52) 55 81 50 14 58
+                      </p>
 
-                    <div class="social-icons">
+                      <p>
+                        <span class="i18n" 
+                              data-es="Correo: " 
+                              data-en="Email: ">Correo: </span>
+                        <a href="mailto:marco_israel@ciencias.unam.mx">marco_israel@ciencias.unam.mx</a>
+                      </p>
+                    </div>
+                            <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/marco-israel-rodriguez-cornejo-b6949a276/"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/marcoisrael"><i class="fab fa-github"></i></a>
                         <a class="social-icon" href="https://www.facebook.com/stonelive"><i class="fab fa-facebook-f"></i></a>
@@ -73,20 +91,23 @@
                     <h2 class="mb-5">Experiencia</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Instituto de Ciencias Nucleares</h3>
-                            <div class="subheading mb-3">Simulaciones númericas</div>
-                            <p>Mi proyecto de titulación, es un estudio sobre enfriamientos rápidos en un modelo físico llamado "2d O(3)". La investigación requirió de la aplicación de métodos de Montecarlo, cadenas de Markov y estadística avanzada, así como el desarrollo de un programa eficiente capaz de realizar las simulaciones con guía del Dr. Wolfgang Peter Bietenholz.
+                            <h3 class="mb-0">Instituto de Ciencias Nucleares UNAM</h3>
+                            <div class="subheading mb-3 i18n" data-es="Simulaciones númericas" data-en="Numeric simulations">Simulaciones númericas</div>
+                            <p class="i18n" 
+                              data-es="Mi proyecto de titulación, es un estudio sobre enfriamientos rápidos en un modelo físico llamado "2d O(3)". La investigación requirió de la aplicación de métodos de Montecarlo, cadenas de Markov y estadística avanzada, así como el desarrollo de un programa eficiente capaz de realizar las simulaciones con guía del Dr. Wolfgang Peter Bietenholz."                             
+                              data-en="My thesis project is a study of rapid cooling in a physical model called 2d O(3). The research required the application of Monte Carlo methods, Markov chains, and advanced statistics, as well as the development of an efficient program capable of performing the simulations, guided by Dr. Wolfgang Peter Bietenholz.">
+                              Mi proyecto de titulación, es un estudio sobre enfriamientos rápidos en un modelo físico llamado "2d O(3)". La investigación requirió de la aplicación de métodos de Montecarlo, cadenas de Markov y estadística avanzada, así como el desarrollo de un programa eficiente capaz de realizar las simulaciones con guía del Dr. Wolfgang Peter Bietenholz.
 </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Mazo 2023 - Julio 2025</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary i18n" data-es="Mazo 2023 - Julio 2025" data-en="March 2023 - July 2025">Mazo 2023 - Julio 2025</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Latin American Journal of Science Education</h3>
                             <div class="subheading mb-3">Amplitudes grandes de un péndulo simple amortiguado</div>
-                            <p>Colabore en un artículo sobre simulaciones numéricas en un sistema físico para la revista Latin American Journal of Science Education con la asesoría del Dr. Alejandro González y Hernández. Realice un experimento controlado en el laboratorio y se escribi un programa para resolver el problema usando el método de euler de segundo orden.</p>
+                            <p class="i18n" data-es="Colabore en un artículo sobre simulaciones numéricas en un sistema físico para la revista Latin American Journal of Science Education con la asesoría del Dr. Alejandro González y Hernández. Realice un experimento controlado en el laboratorio y se escribi un programa para resolver el problema usando el método de euler de segundo orden." data-en="I collaborated on an article on numerical simulations in a physical system for the Latin American Journal of Science Education with the advice of Dr. Alejandro González y Hernández. I conducted a controlled experiment in the laboratory and wrote a program to solve the problem using the second-order Euler method.">Colabore en un artículo sobre simulaciones numéricas en un sistema físico para la revista Latin American Journal of Science Education con la asesoría del Dr. Alejandro González y Hernández. Realice un experimento controlado en el laboratorio y se escribi un programa para resolver el problema usando el método de euler de segundo orden.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Agosto 2017</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary i18n" data-es="Agosto 2017" data-en="August 2017">Agosto 2017</span></div>
                     </div>
                                </section>
             <hr class="m-0" />
@@ -97,7 +118,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Instituto de Ciencias Nucleares UNAM</h3>
-                            <div class="subheading mb-3">Pasante</div>
+                            <div class="subheading mb-3 i18n" data-es="Pasante" data-en="Intern">Pasante</div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2022-2023</span></div>
                     </div>
@@ -105,14 +126,14 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Facultad de Ciencias UNAM</h3>
-                            <div class="subheading mb-3">Licenciatura en Física</div>
+                            <div class="subheading mb-3 i18n" data-es="Licenciatura en Física" data-en="Bachelor's degree in physics">Licenciatura en Física</div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2017-2022</span></div>
                     </div>
                                         <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">CECyT 7 Cuauhtémoc</h3>
-                            <div class="subheading mb-3">Técnico electricista</div>
+                            <div class="subheading mb-3 i18n" data-es="Técnico electricista" data-en="Electrical technician">Técnico electricista</div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2011-2015</span></div>
                     </div>
@@ -123,8 +144,8 @@
             <!-- Skills-->
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Aptitudes</h2>
-                    <div class="subheading mb-3">Lenguajes de proramación</div>
+                    <h2 class="mb-5 i18n" data-es="Aptitudes" data-en="Skills">Aptitudes</h2>
+                    <div class="subheading mb-3 i18n" data-es="Lenguajes de proramación" data-en="Programming languages">Lenguajes de proramación</div>
                         <ul class="fa-ul">
                         <li>
                         <span class="fa-li"><i class="devicon-python-plain colored"></i></span>
@@ -139,7 +160,7 @@
                         Java
                         </li>
                     </ul>
-                <div class="subheading mb-3">Herramientas</div>
+                <div class="subheading mb-3 i18n" data-es="Herramientas" data-en="Tools">Herramientas</div>
                         <ul class="fa-ul">
                         <li>
                         <span class="fa-li"><i class="devicon-linux-plain colored"></i></span>
@@ -157,28 +178,31 @@
                         <span class="fa-li"><i class="devicon-scala-plain colored"></i></span>
                         Scala
                         </li>
-
                     </ul>
-               <div class="subheading mb-3">Idiomas</div>
-<ul class="fa-ul mb-0">
-  <li>
-    <span class="fa-li"><i class="fas fa-language"></i></span>
-    Inglés – Avanzado
-  </li>
-  <li>
-    <span class="fa-li"><i class="fas fa-language"></i></span>
-    Español – Nativo
-  </li>
-  </ul>
+                <div class="subheading mb-3 i18n" data-es="Idiomas" data-en="Languages">Idiomas</div>
+                      <ul class="fa-ul mb-0">
+                      <li>
+                      <span class="fa-li"><i class="fas fa-language"></i></span>
+                      <span class="i18n" data-es="Inglés - Avanzado" data-en="English - Advanced">Inglés – Avanzado</span>
+                      </li>
+                      <li>
+                      <span class="fa-li"><i class="fas fa-language"></i></span>
+                      <span class="i18n" data-es="Español - Nativo" data-en="Spanish - Native">Español – Nativo</span>
+                      </li>
+              </ul>
 
             </section>
             <hr class="m-0" />
             <!-- Interests-->
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Intereses</h2>
-                    <p>Entre mis principales intereses se encuentran la música, la lectura y los idiomas. Entre los libros que más me han impactado están, El mundo y sus demonios por Carl Sagan, La estructura de las revoluciones científicas por Thomas Kuhn y La evolución de la física por Albert Einstein y Leopold Infeld.</p>
-                    <p>La lectura ha sido mi principal motivación para el aprendizaje de idiomas, entre los que se encuentran el inglés y el japonés. Entre mis  aficiones están la guitarra, el piano y la natación.</p>
+                    <h2 class="mb-5 i18n" data-es="Intereses" data-en="Interests">Intereses</h2>
+                    <p class="i18n" 
+                      data-es="Entre mis principales intereses se encuentran la música, la lectura y los idiomas. Entre mis libros favoritos están, El mundo y sus demonios por Carl Sagan, La estructura de las revoluciones científicas por Thomas Kuhn y La evolución de la física por Albert Einstein y Leopold Infeld." 
+                      data-en="My main interests include music, reading, and languages. My favorite books include The Demon-Haunted World by Carl Sagan, The Structure of Scientific Revolutions by Thomas Kuhn, and The Evolution of Physics by Albert Einstein and Leopold Infeld.">Entre mis principales intereses se encuentran la música, la lectura y los idiomas. Entre mis libros favoritos están, El mundo y sus demonios por Carl Sagan, La estructura de las revoluciones científicas por Thomas Kuhn y La evolución de la física por Albert Einstein y Leopold Infeld.</p>
+                    <p class="i18n" 
+                      data-es="La lectura ha sido mi principal motivación para el aprendizaje de idiomas, entre los que se encuentran el inglés y el japonés. Entre mis  aficiones están la guitarra, el piano y la natación." 
+                      data-en="Reading has been my main motivation for learning languages, including English and Japanese. My hobbies include guitar, piano, and swimming.">La lectura ha sido mi principal motivación para el aprendizaje de idiomas, entre los que se encuentran el inglés y el japonés. Entre mis  aficiones están la guitarra, el piano y la natación.</p>
                 </div>
             </section>
             <hr class="m-0" />
@@ -186,7 +210,7 @@
             <section class="resume-section" id="awards">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Extra</h2>
-                    <h4 class="mt-4">Simulación de un péndulo amortiguado</h4>
+                    <h4 class="mt-4 i18n" data-es="Simulación de un péndulo amortiguado" data-en="Damped pendulum simulation">Simulación de un péndulo amortiguado</h4>
                     <video controls width="100%" class="mb-4">
                     <source src="assets/video/pendulo.mp4" type="video/mp4">
                     </video>
@@ -197,6 +221,31 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+          function setLang(lang) {
+            document.querySelectorAll('.i18n').forEach(el => {
+              const text = el.dataset[lang];
+              if (text) {
+                el.textContent = text;
+              }
+            });
+
+            // Guardar idioma en localStorage (opcional)
+            localStorage.setItem('lang', lang);
+          }
+
+          // Detectar idioma del navegador al cargar la página
+          document.addEventListener("DOMContentLoaded", function () {
+            const savedLang = localStorage.getItem('lang');
+            if (savedLang) {
+              setLang(savedLang);
+            } else {
+              const userLang = navigator.language || navigator.userLanguage;
+              const langCode = userLang.startsWith('es') ? 'es' : 'en';
+              setLang(langCode);
+            }
+          });
+      </script>
     </body>
 </html>
 
