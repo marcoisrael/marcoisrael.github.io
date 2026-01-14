@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.9)  13 JAN 2026 18:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.9)  13 JAN 2026 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**resume.tex
-(./resume.tex
+**resume_EN.tex
+(./resume_EN.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -466,8 +466,8 @@ LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./resume.aux)
-\openout1 = `resume.aux'.
+) (./resume_EN.aux)
+\openout1 = `resume_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
 LaTeX Font Info:    ... okay on input line 148.
@@ -563,7 +563,7 @@ fa5free2.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5fre
 e1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.e
 nc}] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-(./resume.aux)
+(./resume_EN.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -571,12 +571,12 @@ L3 programming layer <2025-01-18>
  ) 
 Here is how much of TeX's memory you used:
  15210 strings out of 475043
- 258493 string characters out of 5763020
- 670052 words of memory out of 5000000
+ 258529 string characters out of 5763020
+ 669058 words of memory out of 5000000
  38039 multiletter control sequences out of 15000+600000
  583210 words of font info for 47 fonts, out of 8000000 for 9000
  85 hyphenation exceptions out of 8191
- 75i,5n,79p,397b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,79p,391b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Br
 ands-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5
 /FontAwesome5Free-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
@@ -584,7 +584,7 @@ ands-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5
 m/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb>
-Output written on resume.pdf (1 page, 180541 bytes).
+Output written on resume_EN.pdf (1 page, 179850 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream
