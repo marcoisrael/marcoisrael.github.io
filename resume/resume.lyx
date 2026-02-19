@@ -1,0 +1,1951 @@
+#LyX file created by tex2lyx 2.4
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin /home/israel/Documentos/curriculum/marcoisrael.github.io/resume/
+\textclass article
+\begin_preamble
+
+
+% Packages:
+% for adjusting page geometry
+\usepackage{titlesec}% for customizing section titles
+\usepackage{tabularx}% for making tables with fixed width columns
+\usepackage{array}% tabularx requires this
+\usepackage[dvipsnames]{xcolor}% for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem}% for customizing lists
+\usepackage{fontawesome5}% for using icons
+% for math
+% for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic}% for floating text on the page
+\usepackage{calc}% for calculating lengths
+\usepackage{bookmark}% for bookmarks
+\usepackage{lastpage}% for getting the total number of pages
+\usepackage{changepage}% for one column entries (adjustwidth environment)
+\usepackage{paracol}% for two and three column entries
+\usepackage{ifthen}% for conditional statements
+\usepackage{needspace}% for avoiding page brake right after the section title
+\usepackage{iftex}% check if engine is pdflatex, xetex or luatex
+\usepackage{etoolbox}
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \fi
+
+
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+ % no header or footer
+ % no section numbering
+ % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \textit{\small Marco Israel Rordríguez Cornejo - Página \thepage{} de \pageref*{LastPage}}
+}{}{} % replace number by desired string
+
+
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand{\labelitemi}{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Julio 2025}\hspace{\widthof{Julio 2025}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children no
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding default
+\font_roman "lmodern" "default"
+\font_sans "default" "default"
+\font_typewriter "lmodern" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref true
+\pdf_title "MarcoIsraelRodríguezCornejoCV"
+\pdf_author "MarcoRodríguez"
+\pdf_bookmarks 0
+\pdf_bookmarksnumbered 0
+\pdf_bookmarksopen 0
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 0
+\pdf_pdfborder 0
+\pdf_colorlinks 1
+\pdf_backref section
+\pdf_pdfusetitle 0
+\pdf_quoted_options "pdfcreator=LaTeXwithRenderCV,urlcolor=primaryColor"
+\papersize letter
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\use_lineno false
+\fontcolor #808080
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\footskip 1.0cm
+\secnumdepth 0
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0pt
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle customFooterStyle
+\tracking_changes false
+\output_changes false
+\change_bars false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\begin_inset FormulaMacro
+\newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+newsavebox{
+\backslash
+ANDbox}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+sbox{
+\backslash
+ANDbox}{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+placelastupdatedtext
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{header}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+fontsize{24 pt}{24 pt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+selectfont
+\end_layout
+
+\end_inset
+
+ Marco Israel Rodríguez Cornejo
+\series default
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size normal
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 1
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\begin_layout Standard
+
+\size normal
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+color{black}
+\end_layout
+
+\end_inset
+
+
+\size footnotesize
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+faMapMarker*
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{}
+\length 0.13cm
+\end_inset
+
+Ixtapaluca, México
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+kern
+\end_layout
+
+\end_inset
+
+ 0.25 cm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+AND
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+kern
+\end_layout
+
+\end_inset
+
+ 0.25 cm
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 1
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\begin_layout Standard
+
+\size normal
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hrefWithoutArrow
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+mailto:marco_israel@ciencias.unam.mx
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+color{black}
+\end_layout
+
+\end_inset
+
+
+\size footnotesize
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+faEnvelope
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+[
+\end_layout
+
+\end_inset
+
+regular
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+]
+\end_layout
+
+\end_inset
+
+
+\size normal
+
+\begin_inset space \hspace*{}
+\length 0.13cm
+\end_inset
+
+marco_israel@ciencias.unam.mx
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+kern
+\end_layout
+
+\end_inset
+
+ 0.25 cm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+AND
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+kern
+\end_layout
+
+\end_inset
+
+ 0.25 cm
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 1
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\begin_layout Standard
+
+\size normal
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hrefWithoutArrow
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+tel:+525581501458
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+color{black}
+\end_layout
+
+\end_inset
+
+
+\size footnotesize
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+faPhone*
+\end_layout
+
+\end_inset
+
+
+\size normal
+
+\begin_inset space \hspace*{}
+\length 0.13cm
+\end_inset
+
+52 55 8150 14 58
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+kern
+\end_layout
+
+\end_inset
+
+ 0.25 cm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+AND
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+kern
+\end_layout
+
+\end_inset
+
+ 0.25 cm
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 1
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\begin_layout Standard
+
+\size normal
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hrefWithoutArrow
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+https://marcoisrael.github.io/
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+color{black}
+\end_layout
+
+\end_inset
+
+
+\size footnotesize
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+faLink
+\end_layout
+
+\end_inset
+
+
+\size normal
+
+\begin_inset space \hspace*{}
+\length 0.13cm
+\end_inset
+
+marcoisrael.github.io
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+kern
+\end_layout
+
+\end_inset
+
+ 0.25 cm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+AND
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+kern
+\end_layout
+
+\end_inset
+
+ 0.25 cm
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 1
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\begin_layout Standard
+
+\size normal
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hrefWithoutArrow
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+https://linkedin.com/in/marco-israel-rodriguez-cornejo-b6949a276
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+color{black}
+\end_layout
+
+\end_inset
+
+
+\size footnotesize
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+faLinkedinIn
+\end_layout
+
+\end_inset
+
+
+\size normal
+
+\begin_inset space \hspace*{}
+\length 0.13cm
+\end_inset
+
+marco-israel-rodriguez-cornejo-b6949a276
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+kern
+\end_layout
+
+\end_inset
+
+ 0.25 cm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+AND
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+kern
+\end_layout
+
+\end_inset
+
+ 0.25 cm
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 1
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\begin_layout Standard
+
+\size normal
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+hrefWithoutArrow
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+https://github.com/marcoisrael
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+color{black}
+\end_layout
+
+\end_inset
+
+
+\size footnotesize
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+faGithub
+\end_layout
+
+\end_inset
+
+
+\size normal
+
+\begin_inset space \hspace*{}
+\length 0.13cm
+\end_inset
+
+marcoisrael
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{header}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+vspace{0.3cm - 0.3 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Sobre mi
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{onecolentry}
+\end_layout
+
+\end_inset
+
+ Soy un físico enfocado en la ciencia de datos, simulaciones numéricas y aprendizaje automático. Durante mi formación realicé simulaciones de fenómenos físicos complejos empleando diversos lenguajes de programación y herramientas como Python y Fortran en el centro de datos de alto rendimiento del Instituto de Ciencias Nucleares. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{onecolentry}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Educación
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{twocolentry}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+ 
+\shape italic
+2017 - 2022
+\shape default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Facultad de Ciencias UNAM
+\series default
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Licenciatura en Física
+\shape default
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{twocolentry}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace 0.2cm
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{twocolentry}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+ 
+\shape italic
+2022 - 2023
+\shape default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Instituto de Ciencias Nucleares UNAM
+\series default
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Pasantía
+\shape default
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{twocolentry}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace 0.2cm
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{twocolentry}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+ 
+\shape italic
+2023 - 2024
+\shape default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Tecnológico Nacional de México
+\series default
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Diplomado en ciencia de datos
+\shape default
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{twocolentry}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Experiencia
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{twocolentry}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Mazo 2023 - Julio 2025
+\shape default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Instituto de Ciencias Nucleares UNAM
+\series default
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Enfriamientos rápidos del modelo 2d O(3)"
+target "https://raw.githubusercontent.com/marcoisrael/SigmaModel/master/Marco_Tesis.pdf"
+literal "true"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{twocolentry}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 0.10cm
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{onecolentry}
+\end_layout
+
+\end_inset
+
+ Mi proyecto de titulación, es un estudio sobre enfriamientos rápidos en un modelo físico llamado 2d O(3). La investigación requirió de la aplicación de métodos de Montecarlo, cadenas de Markov y estadística avanzada, así como el desarrollo de un programa eficiente capaz de realizar las simulaciones con guía del Dr. Wolfgang Peter Bietenholz. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{onecolentry}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{twocolentry}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Agosto 2017
+\shape default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Latin American Journal of Science Education
+\series default
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Amplitudes grandes de un péndulo simple amortiguado"
+target "https://www.lajse.org/nov17/22023_Gonzalez_2017.pdf"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{twocolentry}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 0.10cm
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{onecolentry}
+\end_layout
+
+\end_inset
+
+ Colabore en un artículo sobre simulaciones numéricas en un sistema físico para la revista Latin American Journal of Science Education con la asesoría del Dr. Alejandro González y Hernández. Realice un experimento controlado en el laboratorio y se escribi un programa para resolver el problema usando el método de euler de segundo orden. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{onecolentry}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Aptitudes
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{onecolentry}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Lenguajes de programación:
+\series default
+ Python, Java, Fortran, R, Bash. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{onecolentry}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{onecolentry}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Herrameintas:
+\series default
+ SQL, Numpy, Scikit-learn, Matplotlib, Pandas, Tensorflow, Regex, Selenium. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{onecolentry}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{onecolentry}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Idiomas:
+\series default
+ Español, Inglés 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{onecolentry}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Experiencia
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{onecolentry}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Modelos estadísticos:
+\series default
+ He trabajado con diferentes modelos estadísticos como los modelos O(n), Ising y Vander der Wals. Puedo reconocer los problemas específicos en los que son aplicables y plantear las ecuaciones que rigen la evolución de ese sistema. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{onecolentry}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{onecolentry}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Metodos númericos:
+\series default
+ Puedo usar métodos numéricos para resolver ecuaciones diferenciales como Euler y Runge-Kutta. También puedo usar métodos de Monte Carlo en la solución de ecuaciones integro difereneciales. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{onecolentry}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{onecolentry}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Extraccion de datos:
+\series default
+ Puedo extraer información a gran escala de fuentes como archivos html, archivos de texto plano y otro tipos de datos no estructurados usando regex. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{onecolentry}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{onecolentry}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Procesamiento de datos:
+\series default
+ He trabajado con bases de datos relacionales como pandas y SQL, también he trabajado con bases de datos no relacionales como archivos de texto, imágenes audio. Puedo procesar los datos y usar modelos estadísticos como regresión lineal, árboles de decisiones o clusterización para obtener información relevante de los datos. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{onecolentry}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
