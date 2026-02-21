@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.9)  21 FEB 2026 01:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.9)  21 FEB 2026 01:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -579,7 +579,7 @@ L3 programming layer <2025-01-18>
 Here is how much of TeX's memory you used:
  15215 strings out of 475043
  258530 string characters out of 5763020
- 676054 words of memory out of 5000000
+ 675054 words of memory out of 5000000
  38042 multiletter control sequences out of 15000+600000
  583210 words of font info for 47 fonts, out of 8000000 for 9000
  85 hyphenation exceptions out of 8191
@@ -591,7 +591,7 @@ ands-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5
 m/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb>
-Output written on resume.pdf (2 pages, 186269 bytes).
+Output written on resume.pdf (2 pages, 186255 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
